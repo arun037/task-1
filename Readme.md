@@ -1,31 +1,47 @@
-**infrastructure creation using IAC**
+# Infrastructure Creation Using IaC
 
-step 1: clone this repo
+## **Step 1: Clone This Repository**
 
-step 2: run terraform init command to initaialize terraform
+```bash
+git clone <repo-url>
+cd <repo-directory>
+```
 
- '''bash
- terraform init
-                '''
-step 2: create terraform workspace for dev & prod environment
+## **Step 2: Initialize Terraform**
+Run the following command to initialize Terraform:
 
-'''bash
+```bash
+terraform init
+```
+
+## **Step 3: Create Terraform Workspaces**
+Create separate workspaces for `dev` and `prod` environments:
+
+```bash
 terraform workspace create dev
-                                 '''
+```
 
-'''bash
+```bash
 terraform workspace create prod
-                                '''
+```
 
-step 3: Go to repective workspace run terraform plan command to check the changes that are undergoing
+## **Step 4: Plan Terraform Changes**
+Navigate to the respective workspace and run the `terraform plan` command to check the changes:
 
-'''bash
+```bash
 terraform plan --var-file=dev.tfvars
-                                    '''
+```
 
-step 4: terraform apply comand to execute the terraform script
+## **Step 5: Apply Terraform Configuration**
+Apply the Terraform script to create infrastructure:
 
-'''bash
+```bash
 terraform apply --var-file=dev.tfvars --auto-approve
-                                                    '''
+```
+
+Repeat the above steps for the `prod` environment by replacing `dev.tfvars` with `prod.tfvars`.
+
+---
+
+Now your infrastructure is successfully deployed using Terraform! 🚀
 
