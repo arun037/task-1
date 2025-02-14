@@ -43,5 +43,5 @@ Repeat the above steps for the `prod` environment by replacing `dev.tfvars` with
 
 ---
 
-Now your infrastructure is successfully deployed using Terraform! 🚀
+Now your infrastructure is successfully deployed using Terraform!
 
